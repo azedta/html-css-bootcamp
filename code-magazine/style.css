@@ -2,6 +2,7 @@
   /* THIS IS CALLED GLOBAL RESET*/
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
@@ -10,11 +11,10 @@ body {
 }
 
 .container {
-  width: 70%;
+  width: 1200px;
   /* margin-left: auto; // This means that both margins will be computed by the browse 
   margin-right: auto; // Therefore, they will be having the same size */
   margin: 0 auto;
-  position: relative;
 }
 
 nav {
@@ -31,19 +31,19 @@ article {
   border-top: #4cc9f0 10px solid;
   padding: 20px 40px;
   margin-bottom: 60px;
-  height: 80px;
+  /* height: 40px; */
 }
 
 .post-header {
   margin-bottom: 40px;
+  position: relative;
 }
 
 aside {
   background-color: #f7f7f7;
   border-top: 5px solid #4cc9f0;
   border-bottom: 5px solid #4cc9f0;
-  padding: 50px 0;
-  width: 500px;
+  padding: 50px 40px;
 }
 
 .like-button {
@@ -53,7 +53,7 @@ aside {
   font-family: "Courier New", Courier, monospace;
   position: absolute;
   right: 0;
-  top: 14%;
+  top: 20%;
 }
 
 h1,
@@ -139,6 +139,7 @@ li {
 
 .related {
   list-style: none;
+  margin-left: 0;
 }
 
 li:first-child {
@@ -183,4 +184,44 @@ nav a:link {
 
 nav a:link:last-child {
   margin-right: 0;
+}
+
+/* FLOATS */
+.author-img {
+  float: left;
+  margin-bottom: 20px;
+}
+
+.author {
+  float: left;
+  margin-left: 15px;
+  margin-top: 23px;
+}
+
+h1 {
+  float: left;
+}
+
+nav {
+  float: right;
+}
+
+.clear-fix::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+article {
+  width: 825px;
+  float: left;
+}
+
+aside {
+  width: 300px;
+  float: right;
+}
+
+footer {
+  clear: both;
 }
